@@ -99,8 +99,8 @@ function connect(socket){
 		socket.emit(p_evenName,p_data);
 	};
 	
-	desk.addDesk({name:'admin'});
-	consols.log(desk.playerArr.length);
+	desk.addPlayer({name:'admin'});
+	console.log('当前玩家数量：'+desk.playerArr.length);
 	
 	socket.emit('connected',{value:socket.id});
 	
