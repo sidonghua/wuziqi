@@ -1,0 +1,181 @@
+<html>
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html;charset=utf8">
+		<style>
+		    .div_header{
+		    	background: #87CEFA;
+		    	-webkit-border-radius:5px;
+		    }
+			.div_style{
+				margin: 0 auto;
+				padding:10px;
+				width:260px;
+				background: #8A8A8A;
+				-webkit-border-radius:5px;
+			}
+			.div_visited{
+				background:red;
+				-webkit-border-radius:16px;
+				width:32px;
+				height:32px;
+			}
+			
+			.div_vsType_style{
+				display:none;
+				text-align:center;
+				position: fixed; 
+				top:100px;
+				left:600px;
+				margin: 0 auto;
+				padding:20px;
+				width:260px;
+				background: #8A8A8A;
+				-webkit-border-radius:5px;
+			}
+			.input_style{
+				width:60px;
+			}
+			.td_style{
+				border: 1px solid black;
+				width:36px;
+				height:36px;
+				-webkit-box-sizing:border-box;
+				margin: 0 auto;
+			}
+			.td_style_actived{
+				background: #8A8A8A;	
+			}
+			.table_style{
+				
+				margin: 0 auto;
+				border-collapse: collapse;
+			}
+			.show_center{
+				text-align: center;
+				margin: 0 auto;
+			}
+		</style>
+		
+		<script src="lib/jquery-1.6.4.min.js"></script>
+		
+		<script src = "my-log/ADSLib.js"></script>
+		<script src = "my-log/myLogger.js"></script>
+		<script src = "my-log/right-click.js"></script>
+		<script src = "form.js"></script>
+		<script src = "client.js"></script>
+		<script src = "wuziqi-util.js"></script>
+		<script src = "wuziqi.js"></script>
+		<script src = "TransiationUtil.js"></script>
+		<script>
+		
+		
+			function selectedPlayer(){
+				metadata.player.name = player1.name;
+				metadata.player.color = player1.color;
+				_main.action.selectedPalyer(metadata.player);
+			}
+			
+			function init(){
+				//initClient();
+				initWuziqi();
+				
+				_fromInit.initEventBind();
+				
+			}
+			
+			ADS.addEvent(window, 'load', init);
+		</script>
+	</head>
+	<body>
+		<div class = "div_header">
+			<div class="div_style">
+				<output id = "title">轮到走子：</output>
+				<output id = "id_output_player"></output><br/>
+				
+				<output  >选择模式：</output>
+				<select id = "id_select_vsType">
+					<option id = "select" value="none">--请选择--</option>
+					<option id = "self" value="self">左右手互搞</option>
+					<option id = "online" value = "vs">在线对搞</option>
+				</select>
+				<input id = "id_btn_reset" type="button" value = "重置" />
+			</div>
+			
+			<!-- 棋盘部分-->
+			<table id = "table" class = "table_style">
+				
+			</table>
+		</div>
+		<div>
+			<!-- 左右手互博模式-->
+		<div id = "id_div_self" class="div_vsType_style">
+			<table id = "id_table_self">
+				<tr>
+					<td>
+						<output>player1大名：</output>
+					</td>
+					<td>
+						<input id = "id_input_self-palyer1" class="input_style" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<output>player2大名：</output>
+					</td>
+					<td>
+						<input id = "id_input_self-palyer2" class="input_style" />
+					</td>
+				</tr>
+				<tr>
+						<td colspan="2" class = "show_center">
+							<input id = "id_btn_self-play" type = "button" value = "开搞"/>
+						</td>
+					</tr>
+			</table>
+		</div>
+		<div id = "id_div_vsType" class="div_vsType_style">
+				<table id = "id_table_vsType">
+					<tr>
+						<td>
+							<output>请输入你的大名：</output>
+						</td>
+						<td>
+							<input id = "id_input_player" class="input_style"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<output>请选择标识：</output>
+						</td>
+						<td>
+							<select id = "id_select_color">
+								<option id = "id_color_red" value="red" >红色</option>
+								<option id = "id_color_green" value = "green">绿色</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="show_center">
+							<input id = "id_btn_connect" type = "button" value = "连接"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<output>连接状态：</output>
+						</td>
+						<td>
+							<output id = "id_output_connectStatus" ></output>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class = "show_center">
+							<input id = "id_btn_vs-play" type = "button" value = "开战" disabled="true"/>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+	</body>
+</html>
