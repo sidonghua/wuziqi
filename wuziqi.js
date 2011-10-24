@@ -1,5 +1,5 @@
 config = {//生成的棋盘大小
-	widht : 20,
+	width : 25,
 	height : 20
 }
 wuziqiBase = {
@@ -130,7 +130,7 @@ function initPlayer() {
 }
 
 var initWuziqi = function() {
-	wuziqiBase.createTable('table', 20, 20);
+	wuziqiBase.createTable('table', config.height, config.width);
 	//畫棋盤
 	initDirection.createDirection();
 	
