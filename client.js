@@ -106,3 +106,4 @@
 			var random = Math.random();
 			var i = (x - y + 1) * random + y;
 			return parseInt(i);	
+		}
