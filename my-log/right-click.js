@@ -37,7 +37,7 @@ var rightClick = function(){
 		clearAllLog();	
 		if(event.button == 2){
 				var coo = ADS.getMousecCoordinate();
-				ADS.log.write("rightClick,curCoordinate:x:"+coo.X+",y:"+coo.Y);
+	//			ADS.log.write("rightClick,curCoordinate:x:"+coo.X+",y:"+coo.Y);
 				var copyRight = window.copyRight;
 				
 				copyRight.style.display = 'block';

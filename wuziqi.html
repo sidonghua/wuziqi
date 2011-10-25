@@ -38,8 +38,8 @@
 			}
 			.td_style{
 				border: 1px solid black;
-				width:30px;
-				height:30px;
+				width:32px;
+				height:32px;
 				-webkit-box-sizing:border-box;
 				margin: 0 auto;
 			}
@@ -54,6 +54,12 @@
 			.show_center{
 				text-align: center;
 				margin: 0 auto;
+			}
+			.div_color_slector{
+				background:red;
+				-webkit-border-radius:14px;
+				width:28px;
+				height:28px;
 			}
 		</style>
 		
@@ -96,8 +102,8 @@
 				<output  >选择模式：</output>
 				<select id = "id_select_vsType">
 					<option id = "select" value="none">--请选择--</option>
-					<option id = "self" value="self">左右手互搞</option>
-					<option id = "online" value = "vs">在线对搞</option>
+					<option id = "self" value="self">人机对战</option>
+					<option id = "online" value = "vs">在线对战</option>
 				</select>
 				<input id = "id_btn_reset" type="button" value = "重置" />
 			</div>
@@ -157,7 +163,7 @@
 					</tr>
 					<tr>
 						<td colspan="2" class="show_center">
-							<input id = "id_btn_connect" type = "button" value = "连接"/>
+							<input id = "id_btn_connect" type = "button" value = "注册"/>
 						</td>
 					</tr>
 					<tr>

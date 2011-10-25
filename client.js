@@ -92,9 +92,17 @@
 		 connectToServer:function(){
 			jQuery.getScript(_config.getLib(),function(){
 					socket._socket = io.connect(_config.server);
+					alert(socket._socket.id);
 					socket._socket.on('connected', function (p_data) { socket.event.connect(p_data); });
 			});
 		}
 		}
 		
 		
+		//获取一个10000以内的随机数：确保accoutn是唯一的
+		var getRandom = function(){
+			var x = 10000;
+			var y = 1;
+			var random = Math.random();
+			var i = (x - y + 1) * random + y;
+			return parseInt(i);	

@@ -15,12 +15,25 @@
 		<script src = "my-log/right-click.js"></script>
 		
 		<script>
-		
+			
+			
+				function init(){
+					jQuery('#test').click(function(){
+						var x = 10000;
+						var y = 1;
+						var random = Math.random();
+						var i =   (x - y + 1) * random + y;
+						ADS.log.write('当前数：'+parseInt(i));
+					});
+					
+					
+			}
+			ADS.addEvent(window,'load',init);
 		</script>
 
 	</head>
 	<body>
-
+		<input id = "test" type = "button" value = "test"/>
 	
 
 	</body>

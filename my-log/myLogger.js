@@ -11,10 +11,12 @@ function myLogger(id){
 		//設定id值，以便必要時在dom樹種能找到
 		logWindow.setAttribute('id',id);
 		
-		logWindow.sytle.display = 'none';
+	//	logWindow.sytle.display = 'none';
 		logWindow.style.position = 'absolute';
-		logWindow.style.top = top + 'px';
-		logWindow.style.left = left +'px';
+		// logWindow.style.top = top + 'px';
+		// logWindow.style.left = left +'px';
+		logWindow.style.bottom = 10 + 'px';
+		logWindow.style.right = 10 +'px';
 		
 		//設定固定大小并允許窗口內容滾動
 		logWindow.style.width = '200px';		
