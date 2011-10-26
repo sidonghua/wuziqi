@@ -181,7 +181,8 @@ vsTypeAction = {
 			
 			curActivedPlayer = player1;
 			
-			Connection.selectedPalyer(player1);
+			// Connection.selectedPalyer(player1);
+			Connection.connected(_name);
 			//vsTypeAction.action_connect.success();
 		},
 		success:function(){

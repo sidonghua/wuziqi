@@ -1,6 +1,7 @@
 //桌号类别
 Desk = function(p_id){
 	this.id = p_id;
+	this.index = p_id;//开始默认桌号index为id
 	this.status = 'waitting';
 	this.playerArr = new Array();
 	this.observer = new Array();
@@ -8,6 +9,7 @@ Desk = function(p_id){
 
 Desk.prototype = {
 	id:'',
+	index:'',
 	playerArr:[],
 	observer:[],//观察者
 	result:null,
@@ -32,8 +34,15 @@ Desk.prototype = {
 	}
 }
 
-deskManage = {
-	
+DeskManage = {
+	_desks:[],
+	addDesk:function(p_desk){
+		this._desks.splice(p_desk.index,1,p_desk);
+	},
+	getSize:function(){
+		return this._desks.length;
+	}
 }
 
 exports.Desk = Desk;
+exports.DeskManage = DeskManage;

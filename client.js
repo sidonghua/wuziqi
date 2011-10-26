@@ -64,6 +64,15 @@
 		};
 		
 		var Connection = {//发送当前走棋信息到server
+			    connected:function(p_player){
+			    	var _player = getRandom()+'_'+p_player;
+			    	var _data = {player:_player};
+			    	socket._socket.emit('connected',_data);
+			    	socket._socket.on(_player,function(p_data){
+			    		player1.setID(p_data.socketid);
+			    		alert(player1.id);
+			    	});
+			    },
 				selectedPalyer:function(p_playerInfo){
 					socket._socket.emit("selectedPalyer",p_playerInfo);
 				},
@@ -92,8 +101,8 @@
 		 connectToServer:function(){
 			jQuery.getScript(_config.getLib(),function(){
 					socket._socket = io.connect(_config.server);
-					alert(socket._socket.id);
-					socket._socket.on('connected', function (p_data) { socket.event.connect(p_data); });
+					
+					//Connection.connected({player:});
 			});
 		}
 		}
