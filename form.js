@@ -2,7 +2,12 @@
  * 主要处理form表单的相关问题
  */
 
-var vsType = null;
+//var vsType = null;
+//全局变量
+globalVal = {
+	vsType:null,  //对战模式
+	
+}
 //取值为vs和self模式两种
 
 _formElement = {
@@ -51,7 +56,7 @@ _formElementAction = {
 	showVsPanel : function() {//显示所有的对战panel
 		var showDisplay = null;
 		var hideDidplaye = null;
-		if(vsType == 'self') {
+		if(globalVal.vsType == 'self') {
 			showDisplay = _formElement.getJqueryObject(_formElement.selfDiv);
 			hideDidplaye = _formElement.getJqueryObject(_formElement.vsDiv);
 		} else {
@@ -84,7 +89,7 @@ _formAction = {
 				_formElementAction.hideVSPanel();
 				_formAction.select_vsType.failed();
 			} else {
-				vsType = _value;
+				globalVal.vsType = _value;
 				if(_value == 'vs'){
 					try{
 						client.connectToServer();//连接到server
@@ -226,14 +231,14 @@ _fromInit = {
 	},
 	clickChessboard:function(){
 		
-		if(vsType == 'self'){
+		if(globalVal.vsType == 'self'){
 			if(player1.isWin || player2.isWin){
 				_formElement.setValue(_formElement.curPalyer,player1.isWin ? player1.name : player2.name + '已经赢了');
 				return ;
 			}
 			wuziqiBase.playerStep(this.id, curActivedPlayer);
 			curActivedPlayer = player1.actived ? player1 : player2;
-		}else if(vsType == 'vs'){
+		}else if(globalVal.vsType == 'vs'){
 			wuziqiBase.playerStep(this.id, player1);
 			var stepInfo = TransiationUtil.transeStepInfo(player1,this.id);
 			Connection.step(stepInfo);

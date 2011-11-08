@@ -5,9 +5,10 @@ var clearAllLog = function(){
 			document.body.removeChild(rightMenu);
 		}	
 }
+window.copyRight = null;
 var rightClick = function(){
 	var rightMenu = null;
-	window.copyRight = null;
+	
 	var createRightClickMenu = function(){
 			var coo = ADS.getMousecCoordinate();
 			rightMenu = ADS.$('rightMenu');
@@ -17,13 +18,17 @@ var rightClick = function(){
 		
 			//設定id值，以便必要時在dom樹種能找到
 			rightMenu.setAttribute('id','rightMenu');
-			rightMenu.style.listStyleType = 'none';
-			rightMenu.style.display = 'none';
-			 rightMenu.style.padding = '0';
+			// rightMenu.style.listStyleType = 'none';
+			// rightMenu.style.display = 'none';
+			 // rightMenu.style.padding = '2px';
 			// rightMenu.style.margin = '0';
-			setPosition(rightMenu,coo);
-			rightMenu.style.background = 'green';
 			
+			// rightMenu.style.background = 'green';
+			ADS.addClassName(rightMenu,'rightClick_style');
+			rightMenu.oncontextmenu = function(){
+				return false;
+			}
+			setPosition(rightMenu,coo);
 			document.body.appendChild(rightMenu);
 			return false;
 	};
@@ -34,10 +39,10 @@ var rightClick = function(){
 		
 	}
 	this.rightClick = function(){
+		event = window.event || arguments[0];
 		clearAllLog();	
 		if(event.button == 2){
 				var coo = ADS.getMousecCoordinate();
-	//			ADS.log.write("rightClick,curCoordinate:x:"+coo.X+",y:"+coo.Y);
 				var copyRight = window.copyRight;
 				
 				copyRight.style.display = 'block';
@@ -56,28 +61,16 @@ var rightClick = function(){
 			li.appendChild(document.createTextNode(menuName));
 		}
 		
-		li.style.padding = '2px';
-		li.style.border = '0';
-		li.style.borderBottom = '1px dotted black';
-		li.style.margin = '0';
-		li.style.color = '#000';
-		li.style.font = '9px/9px Verdana,Tahoma,Sans';
 		
-		checkRow(li);
+		ADS.addClassName(li,'rightClick_li_style');
+		
+	
 		ADS.addEvent(li,'click',func);
 		rightMenu.appendChild(li);
 		window.copyRight = rightMenu;
 		return true;
 	};
-	var checkRow = function(node){
-		var color = node.style.background;
-		ADS.addEvent(node,'mouseover',function(){
-			this.style.background = '#222';
-		});
-		ADS.addEvent(node,'mouseout',function(){
-			this.style.background = color;
-		});
-	};
+	
 	var menuMouseOver = function(){
 		
 	}

@@ -3,6 +3,7 @@ if(!window.ADS){
 	window['ADS'] = {};
 }
 
+
 function $(){
 	var elements = new Array();
 	
@@ -120,9 +121,10 @@ function getBrowserWindowSize() {
 
 //獲取當前鼠標坐標
 function getMousecCoordinate(){
+	event = window.event || arguments[0];
 	return {
-		'X':event.clientX,
-		'Y':event.clientY
+		'X':event.clientX || document.body.scrollLeft|| document.documentElement.scrollLeft,
+		'Y':event.clientY || document.body.scrollTop || document.documentElement.scrollTop 
 	};
 }
 window['ADS']['$'] = $;

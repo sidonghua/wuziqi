@@ -1,4 +1,8 @@
+//alt+L可打开/关闭log信息档查看相关内容
+
 function myLogger(id){
+	var that = this;
+    this.isShow = false;
 	id = id || 'ADSLogWindow';
 	var logWindow = null;
 	var createWindow = function(){//創建日志窗口
@@ -10,25 +14,10 @@ function myLogger(id){
 		
 		//設定id值，以便必要時在dom樹種能找到
 		logWindow.setAttribute('id',id);
-		
-	//	logWindow.sytle.display = 'none';
-		logWindow.style.position = 'absolute';
-		// logWindow.style.top = top + 'px';
-		// logWindow.style.left = left +'px';
-		logWindow.style.bottom = 10 + 'px';
-		logWindow.style.right = 10 +'px';
-		
-		//設定固定大小并允許窗口內容滾動
-		logWindow.style.width = '200px';		
-		logWindow.style.height = '200px';
-		logWindow.style.overflow = 'scroll';
-		
-		logWindow.style.padding = '0';
-		logWindow.style.margin = '0';
-		logWindow.style.border = '1px solid black';
-		logWindow.style.backgroundColor = 'white';
-		logWindow.style.listStyle = 'none';
-		logWindow.style.font = '10px/10px Verdana,Tahoma,Sans';
+		ADS.addClassName(logWindow,'div_logger_style');
+		// logWindow.style.position = 'absolute';
+		logWindow.style.top = top + 'px';
+		logWindow.style.left = left +'px';
 		
 		//添加到文檔主體中
 		document.body.appendChild(logWindow);
@@ -42,7 +31,9 @@ function myLogger(id){
 	//	ADS.rightClick.usedNewRightClick(logWindow);
 		ADS.rightClick.addRightClickMenu(logWindow,'clear',clear);
 		ADS.rightClick.addRightClickMenu(logWindow,'copy',copy);
+		ADS.rightClick.addRightClickMenu(logWindow,'hide',hide);
 	};
+	
 	function clear(){
 		clearAllLog();
 		while (logWindow.firstChild) {
@@ -55,48 +46,29 @@ function myLogger(id){
 		clearAllLog();
 		alert('copy');
 	}
-	//右擊事件
-	var rightClick = function(){
-		if(event.button == 2){
-			var coo = ADS.getMousecCoordinate();
-			ADS.log.write("rightClick,curCoordinate:x:"+coo.X+",y:"+coo.Y);
-			var rightMenu = ADS.$('rightMenu');
-			if(rightMenu != null)
-				document.body.removeChild(rightMenu);
-			rightMenu = document.createElement('UL');//創建作為日志窗口的dom節點
-		
-			//設定id值，以便必要時在dom樹種能找到
-			rightMenu.setAttribute('id','rightMenu');
-			
-			rightMenu.style.position = 'absolute';
-		    rightMenu.style.top = coo.Y + 'px';
-		    rightMenu.style.left = coo.X +'px';
-			rightMenu.style.background = 'green';
-			var li = document.createElement('LI');
-			li.setAttribute('id','clear');
-		    if(typeof li.innerHTML != undefined){
-				li.innerHTML = 'clear';
-					}else {
-						li.appendChild(document.createTextNode('clear'));
-					}
-			ADS.addEvent(li,'mouseover',menuMouseOver);
-			ADS.addEvent(li,'click',clear);
-			rightMenu.appendChild(li);
-			document.body.appendChild(rightMenu);
-			return false;
-		}
+	
+	function hide(){
+		clearAllLog();
+		that.hideLogWindow();
+	}
+	this.showLogWindow = function(){
+		this.isShow = true;
+		if(!logWindow) createWindow();
+		logWindow.style.display = 'block';
 	}
 	
+	this.hideLogWindow = function(){
+		this.isShow = false;
+		if(!logWindow) createWindow();
+		logWindow.style.display = 'none';
+	}
 	this.writeRaw = function(message){
 		if(!logWindow) createWindow();
 		
 		var li = document.createElement('LI');
-		li.style.padding = '2px';
-		li.style.border = '0';
-		li.style.borderBottom = '1px dotted black';
-		li.style.margin = '0';
-		li.style.color = '#000';
-		li.style.font = '9px/9px Verdana,Tahoma,Sans';
+	
+		
+		ADS.addClassName(li,'logger_li_style');
 		
 		if(typeof message == 'undefined'){
 			li.appendChild(document.createTextNode('Message was undefined'));
@@ -119,7 +91,7 @@ myLogger.prototype = {
 		
 		if(typeof message != 'string'){
 			if(message.toString)
-				return this.writeRaw(message.toString);
+				return this.writeRaw(message.toString());
 			else 
 				return this.writeRaw(typeof message);
 		}
@@ -133,6 +105,20 @@ myLogger.prototype = {
 		return this.writeRaw(message);
 	}
 };
+
+//定义ctrl+l查看log信息
+ADS.addEvent(document, 'keydown', function(w3cevent) {
+	if(w3cevent.altKey && w3cevent.keyCode == 76) {
+		if(ADS.log.isShow){
+			ADS.log.hideLogWindow();
+		}else{
+			ADS.log.showLogWindow();
+		}
+		
+	}
+});
+
+
 
 if(!window.ADS){
 	window['ADS'] = {};

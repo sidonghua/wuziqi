@@ -1,0 +1,27 @@
+.rightClick_style {
+	margin: 0px auto;
+	color: #B1C8D7;
+	display: none;
+	list-style-type:none;
+	background:white;
+	padding: 3px;
+	width:80px;
+	border: 2px solid black;
+	border-left:2px solid #B1C8D7;
+	border-top:2px solid #B1C8D7;
+	font-family: verdana;
+}
+
+.rightClick_li_style{
+	cursor: default;
+	color:black;
+	padding-bottom:4px;
+	padding-top:4px;
+	padding-left:4px;
+	
+}
+
+.rightClick_li_style:hover{
+	margin-left:0px;
+	background: url(img/001.png) repeat-x;
+}

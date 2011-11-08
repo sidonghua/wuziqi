@@ -129,6 +129,8 @@ function initPlayer() {
 	//	returnActived();
 }
 
+
+
 var initWuziqi = function() {
 	wuziqiBase.createTable('table', config.height, config.width);
 	//畫棋盤

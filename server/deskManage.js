@@ -13,7 +13,8 @@ Desk.prototype = {
 	playerArr:[],
 	observer:[],//观察者
 	result:null,
-	status:'',//两个值：waitting  & playing
+	playingArr:{},//两个值：waitting  & playing
+	status:'waitting',
 	addPlayer:function(p_player){
 		if(this.playerArr.length >= 2){
 			console.log('该桌玩家数已满，不能再添加'+this.id);
@@ -29,18 +30,34 @@ Desk.prototype = {
 			}
 		}
 	},
-	setStatus:function(p_status){
-		this.status = p_status;
+	playing:function(p_player){
+		this.playingArr.push(p_player);
+		if(this.playingArr.length == 2){
+			this.status = 'playing';
+		}
 	}
 }
+
+
 
 DeskManage = {
 	_desks:[],
 	addDesk:function(p_desk){
 		this._desks.splice(p_desk.index,1,p_desk);
 	},
+	getDesk:function(p_deskid){
+		for(var i = 0; i < this._desks.length; i ++){
+			if(this._desks[i].id = p_deskid){
+				return this._desks[i];
+			}
+		}
+		return new Desk(p_deskid);
+	},
 	getSize:function(){
 		return this._desks.length;
+	},
+	getDesks:function(){
+		return this._desks;
 	}
 }
 

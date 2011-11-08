@@ -1,0 +1,30 @@
+.div_logger_style {
+	display:none;
+	position: absolute;
+
+	width: 200px;
+	height: 200px;
+	overflow: auto;
+	padding: 0;
+	margin: 0;
+	border: 2px solid #969696;
+	background: white;
+	list-style: none;
+	font: 10px /10px Verdana, Tahoma, Sans;
+	
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.div_logger_style:hover{
+	-webkit-box-shadow: 0 0 15px #4B4B4B;
+	box-shadow: 0 0 15px #4B4B4B;
+	
+}
+
+.logger_li_style{
+	padding: 2px;
+	margin:2px;
+	border-bottom: 1px dotted black;
+	font: 10px /10px Verdana, Tahoma, Sans;
+}

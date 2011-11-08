@@ -3,10 +3,26 @@
 		
 		<meta http-equiv="content-type" content="text/html;charset=utf8">
 		<link href="css/style.css"  rel="stylesheet" type="text/css">
+		
+		<link href="css/login.css" rel="stylesheet" type="text/css">
+		<link href="css/desk.css" rel="stylesheet" type="text/css">
+		
+		<link href="my-log/mylogger.css" rel="stylesheet" />
+		<link href="my-log/rightClick.css" rel="stylesheet" />
+		
 		<style>
+			body{
+				margin: 8px;
+				background: url(img/background.png);
+			}
 		    .div_header{
+		    	margin:0px;
+		    	height:70px;
 		    	background: #87CEFA;
 		    	-webkit-border-radius:5px;
+		    }
+		    .div_emembled_style{
+		    	margin:0px auto;
 		    }
 			.div_style{
 				margin: 0 auto;
@@ -35,7 +51,7 @@
 				-webkit-border-radius:5px;
 			}
 			
-			.td_style{
+			#table .td_style{
 				border: 1px solid black;
 				width:32px;
 				height:32px;
@@ -46,7 +62,7 @@
 				background: #8A8A8A;	
 			}
 			.table_style{
-				
+				display:none;
 				margin: 0 auto;
 				border-collapse: collapse;
 			}
@@ -64,9 +80,19 @@
 		
 		<script src="lib/jquery-1.6.4.min.js"></script>
 		
-		<script src = "my-log/ADSLib.js"></script>
-		<script src = "my-log/myLogger.js"></script>
-		<script src = "my-log/right-click.js"></script>
+		<!--log 信息记录相关js包 -->
+		<script src="my-log/ADSLib.js"></script>
+		<script src="my-log/myLogger.js"></script>
+		<script src="my-log/ADSLibStyleOpration.js"></script>
+		<script src="my-log/ADSLibEvent.js"></script>
+		<script src="my-log/right-click.js"></script>
+		
+		<script src="client/login.js"></script>
+		<script src="client/desk.js"></script>
+		<script src="client/switchDiv.js"></script>
+		
+		<script src="clientServant.js"></script>
+		
 		<script src = "form.js"></script>
 		<script src = "client.js"></script>
 		<script src = "wuziqi-util.js"></script>
@@ -87,12 +113,17 @@
 				
 				_fromInit.initEventBind();
 				
+				initLogin();
+				initDesk();
+				
+				initConnection();
 			}
 			
 			ADS.addEvent(window, 'load', init);
 		</script>
 	</head>
 	<body>
+		<!-- 头信息-->
 		<div class = "div_header">
 			<div class="div_style">
 				<output id = "title">轮到走子：</output>
@@ -112,7 +143,7 @@
 				
 			</table>
 		</div>
-		<div>
+		<div class = "div_emembled_style">
 			<!-- 左右手互博模式-->
 		<div id = "id_div_self" class="div_vsType_style">
 			<table id = "id_table_self">
@@ -139,6 +170,8 @@
 					</tr>
 			</table>
 		</div>
+			<!-- 左右手互博模式 完-->
+		<!--对战模式 -->
 		<div id = "id_div_vsType" class="div_vsType_style">
 				<table id = "id_table_vsType">
 					<tr>
@@ -181,6 +214,51 @@
 				</table>
 				
 			</div>
+		<!--对战模式 完 -->
+		
+		
+		
+		<!--login div -->
+		<div id = "div_login" class="div_login_style">
+			<table id = "table_login" class="table_login_style">
+				<tr>
+					<td>
+						<label>名称</label>
+					</td>
+					<td>
+						<input id = "input_name" class = "input_style" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="td_login_style">
+						<input  type="button" id = "btn_register" value="注册"  class="btn_login_style"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--login div 完-->
+		
+		<!--player info div -->
+		<!--player info div  完-->
+		
+		<!--对战 info div -->
+		<div id = "div_playerInfo" class="div_player-info_style">
+			<label for="check_keepPlayerInfo">一直显示</label>
+			<input id = "check_keepPlayerInfo" type="checkbox" />
+			<label >姓名：</label>
+			<output>
+				test
+			</output>
+		</div>
+		<!--对战 info div 完-->
+		
+		<!--desk div -->
+		<div id = "div_desk" class="div_desk_style">
+			
+			<table id = "table_desk" class = "table_desk_style"></table>
+		</div>
+		<!--desk div 完-->
+		
 		</div>
 	</body>
 </html>

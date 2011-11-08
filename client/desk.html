@@ -2,67 +2,45 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf8">
 		
+		<link href="../css/style.css" rel="stylesheet" />
+		<link href="../css/desk.css" rel="stylesheet" />
+		
+		<link href="../my-log/mylogger.css" rel="stylesheet" />
+		<link href="../my-log/rightClick.css" rel="stylesheet" />
 		<style>
-			.div_table_style {
-				margin: 0 auto;
-			}
-			.table_desk_style {
-				margin: 0 auto;
-				
-			}
-			.td_style {
-				border: 1px solid black;
-				width: 100px;
-				height: 100px;
-				-webkit-box-sizing: border-box;
-				margin: 0 auto;
-			}
+			
 		</style>
 		<script src="../lib/jquery-1.6.4.min.js"></script>
-		<script src = "../my-log/ADSLib.js"></script>
-		<script src = "../my-log/myLogger.js"></script>
-		<script src = "../my-log/right-click.js"></script>
-		
+		<script src="../my-log/ADSLib.js"></script>
+		<script src="../my-log/myLogger.js"></script>
+		<script src="../my-log/ADSLibStyleOpration.js"></script>
+		<script src="../my-log/ADSLibEvent.js"></script>
+		<script src="../my-log/right-click.js"></script>
 		<script src = "../client.js"></script>
 		<script src = "../wuziqi-util.js"></script>
 		<script src = "../wuziqi.js"></script>
-		
 		<script src="desk.js"></script>
 		<script>
 			
-			function initDeskTopIcon(){
-				var str = '<div class = "div_deskIcon_style"> '
-					+ '<img id = "img_player1_icon" class = "img_player-icon_style" src="../img/who.png" />'
-					+ '<img src="../img/desk.png" /> '
-					+ '<img id = "img_player2_icon" class = "img_player-icon_style" src="../img/who.png" />'
-					+ '</div>';
-				var _div_icon = jQuery(str);
-				
-				jQuery(".td_style").append(_div_icon);
-				//jQuery("#0000").append(_div_icon);
-			}
 			
-			function initDesk(){
-				
-				wuziqiBase.createTable('table_desk',6,10);
-				
-				jQuery(".td_style").click(desk.clickDesk);
-				
-				initDeskTopIcon();
-			}
-			
-			ADS.addEvent(window,'load',initDesk);
+
+			ADS.addEvent(window, 'load', initDesk);
+
 		</script>
 	</head>
 	<body>
+		<div id = "div_playerInfo" class="div_player-info_style">
+			<label for="check_keepPlayerInfo">一直显示</label>
+			<input id = "check_keepPlayerInfo" type="checkbox" />
+			<label >姓名：</label>
+			<output>
+				test
+			</output>
+		</div>
 		<div id = "div_desk" class="div_table_style">
 			<!-- 棋盘部分-->
-			<table id = "table_desk" class = "table_desk_style">
-				
-			</table>
+			<table id = "table_desk" class = "table_desk_style"></table>
 		</div>
-		<div>
-			
-		</div>
+		<div></div>
 	</body>
 </html>

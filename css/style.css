@@ -1,6 +1,12 @@
-.input_style{
+body {
+	margin: 8px;
+}
+body input[type="button"]:hover {
+	background: white;
+}
+.input_style {
 	-webkit-border-radius: 5px;
 	border: 1px solid white;
-	width:80px;
+	width: 80px;
 	background: #76EEC6;
 }

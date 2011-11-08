@@ -1,0 +1,26 @@
+.div_login_style {
+	margin-top: 200px;
+	border: 5px solid white;
+	-webkit-border-radius: 20px;
+	position:fixed;
+	width: 300px;
+	height: 200px;
+	left:500px;
+	background: #8A8A8A;
+	
+}
+.table_login_style {
+	margin: 0 auto;
+	
+}
+.td_login_style {
+	margin: 0 auto;
+	text-align: center;
+}
+.btn_login_style {
+	-webkit-border-radius: 5px;
+	border: 1px solid white;
+	width: 100px;
+	height: 40px;
+	cursor: pointer;
+}

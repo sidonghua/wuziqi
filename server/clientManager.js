@@ -15,7 +15,7 @@ Player = function(p_uuid){
 }
 
 Player.prototype = {
-	UUID:null//由client端产生的随机数+用户昵称
+	UUID:null  ,//由client端产生的随机数+用户昵称
 }
 
 
@@ -23,15 +23,15 @@ ClientManager = {
 	clients:[],
 	put:function(p_socketio,p_player){
 		var clientItem = new ClientInfo(p_socketio,p_player);
-		var _index = this._searchValue(p_player.UUID);
+		var _index = this._searchValue(p_socketio);
 		if( _index != null ){
 			this.clients.splice(_index,1,clientItem);
 		}else{
 			this.clients.push(clientItem);
 		}
 	},
-	getClient:function(p_key){
-		var _index = this._searchPlayer(p_key);
+	getClient:function(p_socketid){//根据socketid查询client
+		var _index = this._searchValue(p_socketid);
 		if( _index != null ){
 			return this.clients[_index].player;
 		}
@@ -43,16 +43,16 @@ ClientManager = {
 			this.clients.splice(_index,1);
 		}
 	},
-	_searchValue:function(p_key){
+	_searchValue:function(p_socketid){ //根据socketid查询
 		for(var i = 0 ; i < this.clients.length; i ++){
 			var clientInfo = this.clients[i];
-			if(p_key == clientInfo.socketid){
+			if(p_socketid == clientInfo.socketid){
 				return i;
 			}
 		}
 		return null;
 	},
-	_searchPlayer:function(p_UUID){
+	_searchPlayer:function(p_UUID){//根据palyer.uuid查询
 		for(var i = 0 ; i < this.clients.length; i ++){
 			var clientInfo = this.clients[i];
 			if(p_UUID == clientInfo.player.UUID){
