@@ -56,9 +56,19 @@ _deskAction = {
 	},
 	clickDesk : function() {
 		deskVal.deskid = this.id;
-		ADS.log.write('当前单击桌号：' + this.id);
+		ADS.log.write('当前单击桌号：' +deskVal.deskid);
+		Connection.selectedDesk(deskVal.deskid);
+		
+		//TODO 转换DIV
+		
+		jQuery("#table_desk .td_style").unbind();
+		
+		divSwitch.selectedDeskAfter();
 	}
 }
+
+
+
 
 function initDesk() {
 

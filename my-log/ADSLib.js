@@ -120,8 +120,8 @@ function getBrowserWindowSize() {
 }
 
 //獲取當前鼠標坐標
-function getMousecCoordinate(){
-	event = window.event || arguments[0];
+function getMousecCoordinate(event){
+	event = window.event || event;
 	return {
 		'X':event.clientX || document.body.scrollLeft|| document.documentElement.scrollLeft,
 		'Y':event.clientY || document.body.scrollTop || document.documentElement.scrollTop 

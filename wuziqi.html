@@ -11,10 +11,7 @@
 		<link href="my-log/rightClick.css" rel="stylesheet" />
 		
 		<style>
-			body{
-				margin: 8px;
-				background: url(img/background.png);
-			}
+			
 		    .div_header{
 		    	margin:0px;
 		    	height:70px;
@@ -137,7 +134,10 @@
 				</select>
 				<input id = "id_btn_reset" type="button" value = "重置" />
 			</div>
-			
+			<div id = "div_player1-info">
+				<label></label>
+			</div>
+			<div id = "div_player2-info"></div>
 			<!-- 棋盘部分-->
 			<table id = "table" class = "table_style">
 				
@@ -259,6 +259,9 @@
 		</div>
 		<!--desk div 完-->
 		
+		<div id = "div_playStart">
+			<input type="button" id = "btn_playStart" value="准备"></button>
+		</div>
 		</div>
 	</body>
 </html>

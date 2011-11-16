@@ -25,6 +25,7 @@
 .logger_li_style{
 	padding: 2px;
 	margin:2px;
+	height:15px;
 	border-bottom: 1px dotted black;
 	font: 10px /10px Verdana, Tahoma, Sans;
 }

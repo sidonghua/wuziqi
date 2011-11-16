@@ -67,10 +67,11 @@ function connect(socket){
 		var _player_id = p_data.player;
 		var _desk = DeskManage.getDesk(_deskid);
 		var _player = ClientManager.getClient(_player_id);//此处需要再斟酌
+		console.log("++++++++++_player_id"+_player_id);
 		_desk.addPlayer(_player);
 		DeskManage.addDesk(_desk);
 		socket.emit(_deskid,{value:1});//发送选择结果信息
-		io.broadcast.emit('desk_info_sync',{deskid:_deskid,player:_player.UUID});//广播同步桌号信息
+		socket.broadcast.emit('desk_info_sync',{deskid:_deskid,player:_player.UUID});//广播同步桌号信息
 		
 		socket.on(_deskid+'_start',function(p_data){
 			var _player =  ClientManager.getClient(p_data.player);
@@ -79,7 +80,7 @@ function connect(socket){
 			if(_desk.status == 'playing'){
 				socket.emit(p_data.deskid+'_start_ok',{value:'playing'});
 			}else{
-				io.broadcast.emit(p_data.deskid+'_start',{deskid:p_data.deskid,player:_player.UUID})
+				socket.broadcast.emit(p_data.deskid+'_start',{deskid:p_data.deskid,player:_player.UUID})
 			}
 			
 		});
@@ -87,7 +88,7 @@ function connect(socket){
 		socket.on(_deskid+'_step',function(p_data){
 			var _player =ClientManager.getClient(p_data.player);
 			p_data.player = _player;
-			io.broadcast.emit(p_data.deskid+'_deskid',p_data);
+			socket.broadcast.emit(p_data.deskid+'_deskid',p_data);
 		});
 		
 		socket.on(_deskid+'_win',function(p_data){
@@ -120,7 +121,8 @@ function connect(socket){
 io.sockets.on("connection",connect);
 
 function disconnectAfter(socketio){
-	//ClientManager.remove(socket.id);//客户端断开连接时，可以做统一处理
+	//console.log(socketio.id);
+	//ClientManager.remove(socketio.id);//客户端断开连接时，可以做统一处理
 	// DeskManager.
 }
 

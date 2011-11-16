@@ -1,5 +1,6 @@
 body {
 	margin: 8px;
+	background: url(../img/background.png);
 }
 body input[type="button"]:hover {
 	background: white;

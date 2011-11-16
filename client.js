@@ -87,6 +87,7 @@
 			    	socket._socket.on(_playerUUID,function(p_data){
 			    		
 			    		player1.setID(p_data.socketid);
+			    		ADS.log.write('player.socketid:'+player1.id);
 			    	//	alert(player1.id);
 			    	});
 			    	

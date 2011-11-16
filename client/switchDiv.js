@@ -15,7 +15,8 @@ divSwitch = {
 		jQuery('#'+divElement.deskTable).css('display','block');
 	},
 	selectedDeskAfter:function(){//选择桌号成功后切换显示内容
-		
+		jQuery('#'+divElement.deskTable).css('display','none');
+		jQuery('#'+divElement.tableChess).css('display','block');
 	},
 	selectedVsType:function(){//选择对战模式后切换显示内容
 		

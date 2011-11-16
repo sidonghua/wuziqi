@@ -1,7 +1,7 @@
 //桌号类别
 Desk = function(p_id){
 	this.id = p_id;
-	this.index = p_id;//开始默认桌号index为id
+	this.index = getDeskIndex(p_id);
 	this.status = 'waitting';
 	this.playerArr = new Array();
 	this.observer = new Array();
@@ -59,6 +59,14 @@ DeskManage = {
 	getDesks:function(){
 		return this._desks;
 	}
+}
+
+
+function getDeskIndex(p_deskid){
+	var row = p_deskid.substr(0,2);
+	var col = p_deskid.substr(2,2);
+	var index = (Number(row)*10) + (Number(col));
+	return index;
 }
 
 exports.Desk = Desk;
