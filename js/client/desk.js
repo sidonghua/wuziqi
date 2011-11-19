@@ -5,9 +5,9 @@ deskVal = {
 deskInit = {
 	initDeskTopIcon : function() {
 		var str = '<div class = "div_deskIcon_style" > ' 
-		+ '<img id = "img_player1_icon" class = "img_player-icon_style" src="img/who.png" />' 
-		+ '<img src="img/desk.png" /> ' 
-		+ '<img id = "img_player2_icon" class = "img_player-icon_style" src="img/who.png" />' 
+		+ '<img id = "img_player1_icon" class = "img_player-icon_style" src="../img/who.png" />' 
+		+ '<img src="../img/desk.png" /> ' 
+		+ '<img id = "img_player2_icon" class = "img_player-icon_style" src="../img/who.png" />' 
 		+ '</div> ';
 		var _div_icon = jQuery(str);
 		jQuery("#table_desk .td_style").append(_div_icon);
@@ -71,9 +71,8 @@ _deskAction = {
 
 
 function initDesk() {
-
-	wuziqiBase.createTable('table_desk', 6, 10);
-
+	wuziqiBase.createTable('table_desk', 6, 10,divElement.desk);
+	ADS.log.write("创建桌号");
 	deskInit.initDeskTopIcon();
 	deskInit.showPlayerInfo();
 	_deskAction.actionListener();

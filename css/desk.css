@@ -1,18 +1,19 @@
+.fieldset_desk_style{
+	text-align: center;
+	display: none;
+}
 .div_desk_style {
 	margin: 0 auto;
-	
-	
-	background: #6D7378;
+
 	
 }
 .table_desk_style {
 	margin: 0 auto;
-	display:none;
-	background: #6D7378;
+	
 }
 .div_deskIcon_style {
 	
-	background: #6D7378;
+
 	cursor: pointer;
 	margin: 0 auto;
 	
@@ -20,15 +21,16 @@
 .div_deskIcon_style:hover {
 	
 	margin: 0 auto;
-	background: #6D7378;
 	outline: 2px solid #4B4B4B;
 }
 #table_desk .td_style {
-	border: 1px solid black;
+	border: 2px solid black;
 	width: 100px;
 	height: 100px;
-	-webkit-box-sizing: border-box;
+	-webkit-box-sizing: 3px;
 	margin: 0 auto;
+	
+	
 }
 .div_player-info_style {
 	top:78px;

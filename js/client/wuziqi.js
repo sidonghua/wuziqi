@@ -3,7 +3,8 @@ config = {//生成的棋盘大小
 	height : 20
 }
 wuziqiBase = {
-	createTable : function(table_id, row, col) {//创建棋盘
+	createTable : function(table_id, row, col,parent_id) {//创建棋盘
+		var parent = ADS.$(parent_id) || document.body;
 		var table = document.getElementById(table_id);
 		var str = '';
 		for(var i = 0; i < row; i++) {
@@ -15,7 +16,7 @@ wuziqiBase = {
 			str += '</tr>';
 		}
 		table.innerHTML = str;
-		document.body.appendChild(table);
+		parent.appendChild(table);
 	},
 	playerStep : function(p_id, p_player) {
 		//jQuery('#' + p_id).css("background", p_player.color);
@@ -130,9 +131,8 @@ function initPlayer() {
 }
 
 
-
 var initWuziqi = function() {
-	wuziqiBase.createTable('table', config.height, config.width);
+	wuziqiBase.createTable('table', config.height, config.width,divElement.chess);
 	//畫棋盤
 	initDirection.createDirection();
 	

@@ -2,67 +2,19 @@
 	<head>
 		
 		<meta http-equiv="content-type" content="text/html;charset=utf8">
-		<link href="css/style.css"  rel="stylesheet" type="text/css">
+		<link href="../css/style.css"  rel="stylesheet" type="text/css">
 		
-		<link href="css/login.css" rel="stylesheet" type="text/css">
-		<link href="css/desk.css" rel="stylesheet" type="text/css">
+		<link href="../css/login.css" rel="stylesheet" type="text/css">
+		<link href="../css/desk.css" rel="stylesheet" type="text/css">
+		<link href="../css/chess.css" rel="stylesheet" type="text/css">
 		
-		<link href="my-log/mylogger.css" rel="stylesheet" />
-		<link href="my-log/rightClick.css" rel="stylesheet" />
-		
+		<link href="../my-log/mylogger.css" rel="stylesheet" />
+		<link href="../my-log/rightClick.css" rel="stylesheet" />
+
+
 		<style>
 			
-		    .div_header{
-		    	margin:0px;
-		    	height:70px;
-		    	background: #87CEFA;
-		    	-webkit-border-radius:5px;
-		    }
-		    .div_emembled_style{
-		    	margin:0px auto;
-		    }
-			.div_style{
-				margin: 0 auto;
-				padding:10px;
-				width:260px;
-				background: #8A8A8A;
-				-webkit-border-radius:5px;
-			}
-			.div_visited{
-				background:red;
-				-webkit-border-radius:14px;
-				width:28px;
-				height:28px;
-			}
-			
-			.div_vsType_style{
-				display:none;
-				text-align:center;
-				position: fixed; 
-				top:100px;
-				left:600px;
-				margin: 0 auto;
-				padding:20px;
-				width:260px;
-				background: #8A8A8A;
-				-webkit-border-radius:5px;
-			}
-			
-			#table .td_style{
-				border: 1px solid black;
-				width:32px;
-				height:32px;
-				-webkit-box-sizing:border-box;
-				margin: 0 auto;
-			}
-			.td_style_actived{
-				background: #8A8A8A;	
-			}
-			.table_style{
-				display:none;
-				margin: 0 auto;
-				border-collapse: collapse;
-			}
+		  
 			.show_center{
 				text-align: center;
 				margin: 0 auto;
@@ -75,26 +27,29 @@
 			}
 		</style>
 		
-		<script src="lib/jquery-1.6.4.min.js"></script>
+		<script src="../lib/jquery-1.6.4.min.js"></script>
 		
 		<!--log 信息记录相关js包 -->
-		<script src="my-log/ADSLib.js"></script>
-		<script src="my-log/myLogger.js"></script>
-		<script src="my-log/ADSLibStyleOpration.js"></script>
-		<script src="my-log/ADSLibEvent.js"></script>
-		<script src="my-log/right-click.js"></script>
+		<script src="../my-log/ADSLib.js"></script>
+		<script src="../my-log/myLogger.js"></script>
+		<script src="../my-log/ADSLibStyleOpration.js"></script>
+		<script src="../my-log/ADSLibEvent.js"></script>
+		<script src="../my-log/right-click.js"></script>
 		
-		<script src="client/login.js"></script>
-		<script src="client/desk.js"></script>
-		<script src="client/switchDiv.js"></script>
 		
-		<script src="clientServant.js"></script>
+		<script src="../js/common/switchDiv.js"></script>
 		
-		<script src = "form.js"></script>
-		<script src = "client.js"></script>
-		<script src = "wuziqi-util.js"></script>
-		<script src = "wuziqi.js"></script>
-		<script src = "TransiationUtil.js"></script>
+		<script src = "../js/clientServant.js"></script>
+		<script src = "../js/client.js"></script>
+		<script src = "../js/wuziqi-util.js"></script>
+		<script src = "../js/TransiationUtil.js"></script>
+		
+		<script src = "../js/common/chessForm.js"></script>
+		<script src = "../js/common/switchDiv.js"></script>
+		
+		<script src="../js/client/login.js"></script>
+		<script src="../js/client/desk.js"></script>
+		<script src = "../js/client/wuziqi.js"></script>
 		<script>
 		
 		
@@ -114,6 +69,7 @@
 				initDesk();
 				
 				initConnection();
+				
 			}
 			
 			ADS.addEvent(window, 'load', init);
@@ -139,9 +95,15 @@
 			</div>
 			<div id = "div_player2-info"></div>
 			<!-- 棋盘部分-->
-			<table id = "table" class = "table_style">
+			<fieldset id = "fieldset_chess" class="fieldset_chess_style">
+				<div id = "div_playStart">
+					<input class = "btn_login_style" type="button" id = "btn_playStart" value="准备"></button>
+				</div>
+				<table id = "table" class = "table_style">
 				
-			</table>
+				</table>
+			</fieldset>
+			
 		</div>
 		<div class = "div_emembled_style">
 			<!-- 左右手互博模式-->
@@ -254,14 +216,15 @@
 		
 		<!--desk div -->
 		<div id = "div_desk" class="div_desk_style">
-			
-			<table id = "table_desk" class = "table_desk_style"></table>
+			<fieldset id = "fieldset_desk" class="fieldset_desk_style">
+				
+				<input type="button" value="刷新" id = "btn_deskRefresh" class = "btn_login_style"/>
+				<input type="button" value="刷新棋盘资料" id = "btn_deskRefresh_data" class = "btn_login_style"/>
+				<table id = "table_desk" class = "table_desk_style"></table>
+			</fieldset>
 		</div>
 		<!--desk div 完-->
 		
-		<div id = "div_playStart">
-			<input type="button" id = "btn_playStart" value="准备"></button>
-		</div>
 		</div>
 	</body>
 </html>

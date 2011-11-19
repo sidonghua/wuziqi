@@ -2,6 +2,14 @@ body {
 	margin: 8px;
 	background: url(../img/background.png);
 }
+
+body input[type="button"]{
+	-webkit-border-radius: 5px;
+	border: 1px solid white;
+	width: 100px;
+	height: 40px;
+	cursor: pointer;
+}
 body input[type="button"]:hover {
 	background: white;
 }
@@ -10,4 +18,7 @@ body input[type="button"]:hover {
 	border: 1px solid white;
 	width: 80px;
 	background: #76EEC6;
+}
+fieldset{
+	margin: 0 auto;
 }

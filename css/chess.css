@@ -1,0 +1,55 @@
+.fieldset_chess_style{
+	display: none;
+	margin: 0 auto;
+	text-align: center;
+}
+  .div_header{
+		    	margin:0px;
+		    	height:70px;
+		    	background: #87CEFA;
+		    	-webkit-border-radius:5px;
+		    }
+		    .div_emembled_style{
+		    	margin:0px auto;
+		    }
+			.div_style{
+				margin: 0 auto;
+				padding:10px;
+				width:260px;
+				background: #8A8A8A;
+				-webkit-border-radius:5px;
+			}
+			.div_visited{
+				background:red;
+				-webkit-border-radius:14px;
+				width:28px;
+				height:28px;
+			}
+			
+			.div_vsType_style{
+				display:none;
+				text-align:center;
+				position: fixed; 
+				top:100px;
+				left:600px;
+				margin: 0 auto;
+				padding:20px;
+				width:260px;
+				background: #8A8A8A;
+				-webkit-border-radius:5px;
+			}
+			
+			#table .td_style{
+				border: 1px solid black;
+				width:32px;
+				height:32px;
+				-webkit-box-sizing:border-box;
+				margin: 0 auto;
+			}
+			.td_style_actived{
+				background: #8A8A8A;	
+			}
+			.table_style{
+				margin: 0 auto;
+				border-collapse: collapse;
+			}

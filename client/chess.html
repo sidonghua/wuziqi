@@ -1,0 +1,227 @@
+<html>
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html;charset=utf8">
+		<link href="../css/style.css"  rel="stylesheet" type="text/css">
+		
+		<link href="../css/login.css" rel="stylesheet" type="text/css">
+		<link href="../css/desk.css" rel="stylesheet" type="text/css">
+		<link href="../css/chess.css" rel="stylesheet" type="text/css">
+		
+		<link href="../my-log/mylogger.css" rel="stylesheet" />
+		<link href="../my-log/rightClick.css" rel="stylesheet" />
+		
+		<style>
+			
+		  
+			.show_center{
+				text-align: center;
+				margin: 0 auto;
+			}
+			.div_color_slector{
+				background:red;
+				-webkit-border-radius:14px;
+				width:28px;
+				height:28px;
+			}
+		</style>
+		
+		<script src="../lib/jquery-1.6.4.min.js"></script>
+		
+		<!--log 信息记录相关js包 -->
+		<script src="../my-log/ADSLib.js"></script>
+		<script src="../my-log/myLogger.js"></script>
+		<script src="../my-log/ADSLibStyleOpration.js"></script>
+		<script src="../my-log/ADSLibEvent.js"></script>
+		<script src="../my-log/right-click.js"></script>
+		
+		<script src="../js/client/login.js"></script>
+		<script src="../js/client/desk.js"></script>
+		<script src="../js/common/switchDiv.js"></script>
+		
+		<script src="../js/clientServant.js"></script>
+		<script src = "../js/client.js"></script>
+		<script src = "../js/wuziqi-util.js"></script>
+		
+		<script src = "../js/common/chessForm.js"></script>
+		
+		
+		<script src = "../js/client/wuziqi.js"></script>
+		<script src = "../js/TransiationUtil.js"></script>
+		<script>
+		
+		
+			function selectedPlayer(){
+				metadata.player.name = player1.name;
+				metadata.player.color = player1.color;
+				_main.action.selectedPalyer(metadata.player);
+			}
+			
+			function init(){
+				//initClient();
+				initWuziqi();
+				
+				_fromInit.initEventBind();
+				
+				initLogin();
+				initDesk();
+				
+				initConnection();
+			}
+			
+			ADS.addEvent(window, 'load', init);
+		</script>
+	</head>
+	<body>
+		<!-- 头信息-->
+		<div class = "div_header">
+			<div class="div_style">
+				<output id = "title">轮到走子：</output>
+				<output id = "id_output_player"></output><br/>
+				
+				<output  >选择模式：</output>
+				<select id = "id_select_vsType">
+					<option id = "select" value="none">--请选择--</option>
+					<option id = "self" value="self">人机对战</option>
+					<option id = "online" value = "vs">在线对战</option>
+				</select>
+				<input id = "id_btn_reset" type="button" value = "重置" />
+			</div>
+			<div id = "div_player1-info">
+				<label></label>
+			</div>
+			<div id = "div_player2-info"></div>
+			<!-- 棋盘部分-->
+			<fieldset id = "fieldset_chess" class="fieldset_chess_style">
+				<div id = "div_playStart">
+					<input class = "btn_login_style" type="button" id = "btn_playStart" value="准备"></button>
+				</div>
+				<table id = "table" class = "table_style">
+				
+				</table>
+			</fieldset>
+			
+		</div>
+		<div class = "div_emembled_style">
+			<!-- 左右手互博模式-->
+		<div id = "id_div_self" class="div_vsType_style">
+			<table id = "id_table_self">
+				<tr>
+					<td>
+						<output>player1大名：</output>
+					</td>
+					<td>
+						<input id = "id_input_self-palyer1" class="input_style" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<output>player2大名：</output>
+					</td>
+					<td>
+						<input id = "id_input_self-palyer2" class="input_style" />
+					</td>
+				</tr>
+				<tr>
+						<td colspan="2" class = "show_center">
+							<input id = "id_btn_self-play" type = "button" value = "开搞"/>
+						</td>
+					</tr>
+			</table>
+		</div>
+			<!-- 左右手互博模式 完-->
+		<!--对战模式 -->
+		<div id = "id_div_vsType" class="div_vsType_style">
+				<table id = "id_table_vsType">
+					<tr>
+						<td>
+							<output>请输入你的大名：</output>
+						</td>
+						<td>
+							<input id = "id_input_player" class="input_style"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<output>请选择标识：</output>
+						</td>
+						<td>
+							<select id = "id_select_color">
+								<option id = "id_color_red" value="red" >红色</option>
+								<option id = "id_color_green" value = "green">绿色</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="show_center">
+							<input id = "id_btn_connect" type = "button" value = "注册"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<output>连接状态：</output>
+						</td>
+						<td>
+							<output id = "id_output_connectStatus" ></output>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class = "show_center">
+							<input id = "id_btn_vs-play" type = "button" value = "开战" disabled="true"/>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		<!--对战模式 完 -->
+		
+		
+		
+		<!--login div -->
+		<div id = "div_login" class="div_login_style">
+			<table id = "table_login" class="table_login_style">
+				<tr>
+					<td>
+						<label>名称</label>
+					</td>
+					<td>
+						<input id = "input_name" class = "input_style" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="td_login_style">
+						<input  type="button" id = "btn_register" value="注册"  class="btn_login_style"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--login div 完-->
+		
+		<!--player info div -->
+		<!--player info div  完-->
+		
+		<!--对战 info div -->
+		<div id = "div_playerInfo" class="div_player-info_style">
+			<label for="check_keepPlayerInfo">一直显示</label>
+			<input id = "check_keepPlayerInfo" type="checkbox" />
+			<label >姓名：</label>
+			<output>
+				test
+			</output>
+		</div>
+		<!--对战 info div 完-->
+		
+		<!--desk div -->
+			<div id = "div_desk" class="div_desk_style">
+		<fieldset id = "fieldset_desk" class="fieldset_desk_style">
+		
+				<input type="button" value="刷新" id = "btn_deskRefresh" class = "btn_login_style"/>
+				<table id = "table_desk" class = "table_desk_style"></table>
+			
+		</fieldset>
+		</div>
+		<!--desk div 完-->
+		
+		</div>
+	</body>
+</html>
