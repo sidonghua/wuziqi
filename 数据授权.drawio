@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T06:51:56.160Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="5_QQ7yDD8LoGde9iH1sL" version="15.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-20T06:52:36.634Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="yOnTey2frEOlxK9_7gli" version="15.5.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1038" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -13,16 +13,16 @@
         <mxCell id="092yh7iM73x2DRxZ7nhi-2" value="采数需求实施方CL" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="100" y="290" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="092yh7iM73x2DRxZ7nhi-3" value="审批要点：采数需求是否合理" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="092yh7iM73x2DRxZ7nhi-3" value="审批要点：采数需求是否合理" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#99FFFF;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="265" y="210" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="092yh7iM73x2DRxZ7nhi-4" value="采数需求实施人" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="100" y="150" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="092yh7iM73x2DRxZ7nhi-5" value="审批要点：初步判断系统数据能否满足业务需求" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="092yh7iM73x2DRxZ7nhi-5" value="审批要点：初步判断系统数据能否满足业务需求" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#99FFFF;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="260" y="140" width="200" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="092yh7iM73x2DRxZ7nhi-6" value="审批要点：采数需求是否符合系统定位，是否承接此采数需求" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="092yh7iM73x2DRxZ7nhi-6" value="审批要点：采数需求是否符合系统定位，是否承接此采数需求" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#99FFFF;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="265" y="290" width="200" height="60" as="geometry" />
         </mxCell>
       </root>
