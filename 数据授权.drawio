@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T08:00:37.134Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="zoAx0B-igGhVUzKwq63h" version="15.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-20T08:26:27.719Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="ve-9Lqj_i_K-jl2eGbko" version="15.5.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2048" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -43,7 +43,7 @@
         <mxCell id="092yh7iM73x2DRxZ7nhi-7" value="法律合规部数据治理岗" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="300" y="380" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="092yh7iM73x2DRxZ7nhi-8" value="审批要点：是否有法务方面的风险" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="092yh7iM73x2DRxZ7nhi-8" value="审批要点：&lt;br&gt;1、导出公司是否有法务方面的风险（如是否需要用户授权）&lt;br&gt;2、应用场景是否在用户授权范围内" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="430" y="370" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="092yh7iM73x2DRxZ7nhi-14" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="092yh7iM73x2DRxZ7nhi-9" target="092yh7iM73x2DRxZ7nhi-7">
