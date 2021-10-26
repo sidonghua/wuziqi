@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-26T08:29:49.140Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="sbmt6nw5Qjs3eibwoIEL" version="15.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-26T08:30:16.402Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="wOoTAqhZ4op-Wedod42P" version="15.5.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="数据授权审批链">
     <mxGraphModel dx="2048" dy="1775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -119,6 +119,9 @@
         </mxCell>
         <mxCell id="RnQ0RiS_U-ooCSh7I0GW-6" value="审批要点：执行采数脚本，提供数据采集结果" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="270" y="780" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RnQ0RiS_U-ooCSh7I0GW-7" value="审批要点：指定具体执行人" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="270" y="710" width="200" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
