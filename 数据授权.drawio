@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-26T06:17:17.206Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="IKG1yjVvPL7cQzzS8ndG" version="15.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-26T06:18:45.052Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="dh0w1qv0BrbXu1apt_7j" version="15.5.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="数据授权审批链">
     <mxGraphModel dx="1865" dy="1684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -19,7 +19,7 @@
         <mxCell id="092yh7iM73x2DRxZ7nhi-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="092yh7iM73x2DRxZ7nhi-2" target="092yh7iM73x2DRxZ7nhi-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="092yh7iM73x2DRxZ7nhi-2" value="采数需求对接方CL" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="092yh7iM73x2DRxZ7nhi-2" value="采数需求对接方CL？" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="100" y="290" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="092yh7iM73x2DRxZ7nhi-3" value="审批要点：采数需求是否合理、必要" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -66,6 +66,9 @@
         <mxCell id="092yh7iM73x2DRxZ7nhi-22" value="风险管理部数据治理岗" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="300" y="480" width="120" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="RnQ0RiS_U-ooCSh7I0GW-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="092yh7iM73x2DRxZ7nhi-24" target="RnQ0RiS_U-ooCSh7I0GW-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="092yh7iM73x2DRxZ7nhi-24" value="信息技术部（数据治理岗）" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="100" y="647" width="120" height="40" as="geometry" />
         </mxCell>
@@ -105,8 +108,11 @@
         <mxCell id="RnQ0RiS_U-ooCSh7I0GW-1" value="执行人？" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="100" y="790" width="120" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="RnQ0RiS_U-ooCSh7I0GW-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnQ0RiS_U-ooCSh7I0GW-2" target="RnQ0RiS_U-ooCSh7I0GW-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="RnQ0RiS_U-ooCSh7I0GW-2" value="数据需求执行CL" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="100" y="710" width="120" height="40" as="geometry" />
+          <mxGeometry x="100" y="720" width="120" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
