@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T07:00:08.533Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="eIEASpURxBARgqIVnWVj" version="15.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T07:07:51.557Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="ZCy4rC-grGLVjZJpviV4" version="15.7.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="数据授权审批链">
-    <mxGraphModel dx="1865" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2048" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -31,7 +31,7 @@
         <mxCell id="092yh7iM73x2DRxZ7nhi-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="092yh7iM73x2DRxZ7nhi-7" target="092yh7iM73x2DRxZ7nhi-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="092yh7iM73x2DRxZ7nhi-7" value="法律合规部数据治理岗" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="092yh7iM73x2DRxZ7nhi-7" value="法律合规部" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="300" y="387" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="092yh7iM73x2DRxZ7nhi-8" value="审批要点：&lt;br&gt;1、同判定条件组内容" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -53,7 +53,7 @@
             <mxPoint x="160" y="587" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="092yh7iM73x2DRxZ7nhi-22" value="风险管理部数据治理岗" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="092yh7iM73x2DRxZ7nhi-22" value="风险管理部" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="300" y="487" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="092yh7iM73x2DRxZ7nhi-25" value="审批要点：是否同意授权认责数据提供给申请方使用" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
