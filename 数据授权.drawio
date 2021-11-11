@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-11T06:57:33.104Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="lvRWw91D9djP6x_aLIv2" version="15.7.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-11T06:58:34.181Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="D0UqnYUAuxTjStigVHaH" version="15.7.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="数据授权审批链">
     <mxGraphModel dx="1865" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -85,14 +85,20 @@
         <mxCell id="RnQ0RiS_U-ooCSh7I0GW-0" value="所在团队数据治理岗" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="100" y="80" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="RnQ0RiS_U-ooCSh7I0GW-1" value="执行人？" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="100" y="630" width="120" height="40" as="geometry" />
+        <mxCell id="RnQ0RiS_U-ooCSh7I0GW-1" value="执行人" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="100" y="610" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="RnQ0RiS_U-ooCSh7I0GW-5" value="审批要点：预审采数需求，初步评估采数需求是否符合数据治理要求" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="265" y="70" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RnQ0RiS_U-ooCSh7I0GW-6" value="审批要点：执行采数脚本，提供数据采集结果" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="265" y="620" width="200" height="60" as="geometry" />
+          <mxGeometry x="265" y="600" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0CebFShcBjWam3gC8jyU-0" value="数据接收人" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="100" y="680" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0CebFShcBjWam3gC8jyU-1" value="审批要点：承诺数据不超范围使用" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;strokeColor=#6666FF;align=left;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="265" y="680" width="200" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
